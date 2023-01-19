@@ -1,0 +1,11 @@
+---
+title: "Posts"
+layout: "base.njk"
+---
+
+<h2 class="posts__heading">Recent posts</h2>
+<div class="post-list">
+  {% asyncEach post in collections.posts | reverse %}
+    {% include "post-card.njk" %}
+  {% endeach %}
+</div>
