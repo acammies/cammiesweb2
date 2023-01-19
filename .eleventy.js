@@ -25,6 +25,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addWatchTarget("./src/css/");
     eleventyConfig.addPassthroughCopy("./src/images/");
     eleventyConfig.addPassthroughCopy({ "./src/favicons": "/" });
+    eleventyConfig.addPassthroughCopy("./css/fonts/");
     eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
     eleventyConfig.addNunjucksAsyncShortcode("EleventyImage", imageShortcode);
     eleventyConfig.addFilter("asPostDate", (dateObj) => {
