@@ -1,4 +1,5 @@
 ---
+eleventyExcludeFromCollections: true
 title: A post with code samples
 date: '2029-06-18'
 tags:

@@ -4,7 +4,10 @@ layout: "base.njk"
 
 <div class="project">
   <h2 class="project__heading">{{ title }}</h2>
+  
   <div>
+        <p class="project-card__summary">{{ date | asPostDate }}</p>
+
       {# <span> Published: {{ date }} </span> #}
   </div>
   

@@ -1,7 +1,7 @@
 <section class="projects">
-  <h2 class="project__heading">Recent projects</h2>
+  <h2 class="project__heading">Recent posts</h2>
   <div class="project-grid">
-    {% asyncEach post in collections.posts %}
+    {% asyncEach post in collections.posts | reverse %}
       {% include "post-card.njk" %}
     {% endeach %}
   </div>
