@@ -1,5 +1,26 @@
 {
   "dependencies": {
     "@11ty/eleventy": "^2.0.0-beta.1"
-  }
+  },
+  "name": "cammiesweb2",
+  "description": "Test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "build": "eleventy",
+    "start": "eleventy --serve",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/acammies/cammiesweb2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/acammies/cammiesweb2/issues"
+  },
+  "homepage": "https://github.com/acammies/cammiesweb2#readme"
 }
