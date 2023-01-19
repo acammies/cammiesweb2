@@ -1,4 +1,5 @@
 const Image = require("@11ty/eleventy-img");
+const { DateTime } = require("luxon");
 
 async function imageShortcode(src, alt, sizes) {
   let metadata = await Image(`./src${src}`, {
@@ -18,6 +19,7 @@ async function imageShortcode(src, alt, sizes) {
   return Image.generateHTML(metadata, imageAttributes);
 }
 
+
 module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("./src/css/");
     eleventyConfig.addWatchTarget("./src/css/");
@@ -25,7 +27,10 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy({ "./src/favicons": "/" });
     eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
     eleventyConfig.addNunjucksAsyncShortcode("EleventyImage", imageShortcode);
-
+    eleventyConfig.addFilter("asPostDate", (dateObj) => {
+        return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_MED);
+         // other config likely here
+       });
 
 
     return {
